@@ -2,21 +2,22 @@ package com.yasser;
 public class Main {
     public static void main(String[] args) {
         System.out.println("Hello Switch!");
+        //matchCharToChallengeChars();
 
-        //CHALLENGE
-        /*
-        * Create a switch statement that uses char
-        * Create a char variable and test it for A,B,C,D,E
-        * Display if the char matches or not
-        * */
-        char[] chars = {'A','B','C','D','E','F','G','H','F'};
-        for (char input:chars
-             ) {
-            matchCharToChallengeChars(input);
-        }
+
 
     }
-    private static void matchCharToChallengeChars(char input) {
+    //CHALLENGE
+    /*
+     * Create a switch statement that uses char
+     * Create a char variable and test it for A,B,C,D,E
+     * Display if the char matches or not
+     * */
+    private static void matchCharToChallengeChars() {
+        char[] chars = {'A','B','C','D','E','F','G','H','F'};
+        for (char input:chars
+        ) {
+
         switch (input){
             case 'A':
                 System.out.println("A matched in the switch!");
@@ -35,6 +36,8 @@ public class Main {
                 break;
             default:
                 System.out.println(input + " did not match the challenge chars");
+                break;
+        }
         }
     }
 }
