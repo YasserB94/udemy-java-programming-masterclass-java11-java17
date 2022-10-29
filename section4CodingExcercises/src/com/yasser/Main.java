@@ -5,7 +5,38 @@ public class Main {
         //testSpeedConverter();
         //testMegaBytesConverter();
         //testBarkingDog();
-        testLeapYear();
+        //testLeapYear();
+        testDecimalComparator();
+    }
+    private static void testDecimalComparator(){
+        class TestCase{
+            double valOne;
+            double valTwo;
+            boolean expectedReturnValue;
+        }
+        TestCase[] testCases = new TestCase[4];
+        testCases[0] = new TestCase();
+        testCases[1] = new TestCase();
+        testCases[2] = new TestCase();
+        testCases[3] = new TestCase();
+        testCases[0].valOne = -3.1756;
+        testCases[0].valTwo = -3.175;
+        testCases[0].expectedReturnValue = true;
+        testCases[1].valOne = 3.175;
+        testCases[1].valTwo = 3.176;
+        testCases[1].expectedReturnValue = false;
+        testCases[2].valOne = 3.0;
+        testCases[2].valTwo = 3.0;
+        testCases[2].expectedReturnValue = true;
+        testCases[3].valOne = -3.123;
+        testCases[3].valTwo = 3.123;
+        testCases[3].expectedReturnValue = false;
+
+        for (TestCase testCase:testCases
+             ) {
+            System.out.println("Expected: " + testCase.expectedReturnValue + " Received: " + DecimalComparator.areEqualByThreeDecimalPlaces(testCase.valOne, testCase.valTwo));
+        }
+
     }
     private static void testLeapYear(){
         int[] testCases = {1700,1800,1855,1856,1900,1924,2000,2100,2200,2300,2500,2600};
