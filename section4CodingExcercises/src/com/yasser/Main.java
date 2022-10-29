@@ -3,7 +3,47 @@ public class Main {
     public static void main(String[] args) {
         System.out.println("Hello Excercises!");
         //testSpeedConverter();
-        testMegaBytesConverter();
+        //testMegaBytesConverter();
+        testBarkingDog();
+    }
+    private static void testBarkingDog(){
+        class TestCase{
+            boolean barking;
+            int hourOfDay;
+            public void setBarking(boolean barking) {
+                this.barking = barking;
+            }
+            public void setHourOfDay(int hourOfDay) {
+                this.hourOfDay = hourOfDay;
+            }
+        }
+        TestCase[] testCases = new TestCase[4];
+        testCases[0] = new TestCase();
+        testCases[1] = new TestCase();
+        testCases[2] = new TestCase();
+        testCases[3] = new TestCase();
+
+        testCases[0].barking = true;
+        testCases[0].hourOfDay = 1;
+
+        testCases[1].barking = false;
+        testCases[1].hourOfDay = 2;
+
+        testCases[2].barking = true;
+        testCases[2].hourOfDay = 8;
+
+        testCases[3].barking = true;
+        testCases[3].hourOfDay = -1;
+
+        for (TestCase testCase:testCases
+             ) {
+            if(BarkingDog.shouldWakeUp(testCase.barking,testCase.hourOfDay)){
+                System.out.println("Method Returned True");
+            }else{
+                System.out.println("Method Returned False");
+            }
+        }
+
     }
     private static void testMegaBytesConverter(){
         System.out.println();
