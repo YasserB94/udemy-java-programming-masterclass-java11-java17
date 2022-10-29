@@ -24,27 +24,31 @@ public class Main {
     public static void main(String[] args) {
         System.out.println("Hello Static Polymorphism!");
         System.out.println(getDurationString(5,5));
+        System.out.println(getDurationString(1,60));
+        System.out.println(getDurationString(65,61));
+        System.out.println(getDurationString(3945L));
         System.out.println(getDurationString(500,500));
         System.out.println(getDurationString(60,60));
         System.out.println(getDurationString(5000));
-
+        System.out.println(getDurationString(3945L));
     }
     //SECONDS AND MINUTES CHALLENGE
-    private static String getDurationString(int minutes,int seconds){
+    private static String getDurationString(long minutes,long seconds){
         if((!isPositiveNumber(minutes))||(!isPositiveNumber(seconds))){
             return "Invalid value";
         }
-        int totalSeconds = (minutes*SECONDS_IN_ONE_MINUTE)+seconds;
-        int totalHours = (totalSeconds/SECONDS_IN_ONE_HOUR>=1)? ((int) Math.floor(totalSeconds/SECONDS_IN_ONE_HOUR)) : 0;
-        int remainingSeconds = totalSeconds-(totalHours*SECONDS_IN_ONE_HOUR);
-        int remainingMinutes = (remainingSeconds/SECONDS_IN_ONE_MINUTE>=1)? ((int) Math.floor(remainingSeconds/SECONDS_IN_ONE_MINUTE)):0;
-        remainingSeconds-=remainingMinutes*SECONDS_IN_ONE_MINUTE;
-        return totalHours + "h " + remainingMinutes + "m " + remainingSeconds + "s";
+        if(seconds>=SECONDS_IN_ONE_MINUTE){
+            if(minutes>=MINUTES_IN_ONE_HOUR){
+                return getDurationString((minutes*SECONDS_IN_ONE_MINUTE)+seconds);
+            }
+            return getDurationString(seconds);
+        }
+        return (minutes/MINUTES_IN_ONE_HOUR) + "h " + (minutes%SECONDS_IN_ONE_MINUTE) + "m " + seconds + "s";
     }
-    private static String getDurationString(int seconds){
-        return getDurationString(0,seconds);
+    private static String getDurationString(long seconds){
+            return getDurationString((seconds/SECONDS_IN_ONE_MINUTE),(seconds%SECONDS_IN_ONE_MINUTE));
     }
-    private static boolean isPositiveNumber(int x){
+    private static boolean isPositiveNumber(long x){
         return (x>=0);
     }
     private static double calcFeetAndInchesToCentimeters(double feet,double inches){
