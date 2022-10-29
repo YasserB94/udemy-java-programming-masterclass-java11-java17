@@ -6,7 +6,37 @@ public class Main {
         //testMegaBytesConverter();
         //testBarkingDog();
         //testLeapYear();
-        testDecimalComparator();
+        //testDecimalComparator();
+        testEqualSumChecker();
+    }
+    private static void testEqualSumChecker(){
+        class TestCase{
+            int valOne,valTwo,valThree;
+            boolean expectedReturn;
+        }
+        TestCase[] testCases = new TestCase[3];
+        testCases[0]= new TestCase();
+        testCases[1]= new TestCase();
+        testCases[2]= new TestCase();
+
+        testCases[0].valOne = 1;
+        testCases[0].valTwo = 1;
+        testCases[0].valThree = 1;
+        testCases[0].expectedReturn = false;
+        testCases[1].valOne = 1;
+        testCases[1].valTwo = 1;
+        testCases[1].valThree = 2;
+        testCases[1].expectedReturn = true;
+        testCases[2].valOne = 1;
+        testCases[2].valTwo = -1;
+        testCases[2].valThree = 0;
+        testCases[2].expectedReturn = true;
+
+        for (TestCase testCase:testCases
+             ) {
+            System.out.println("Expected: " + testCase.expectedReturn + " Received: " + EqualSumChecker.hasEqualSum(testCase.valOne,testCase.valTwo,testCase.valThree));
+        }
+
     }
     private static void testDecimalComparator(){
         class TestCase{
