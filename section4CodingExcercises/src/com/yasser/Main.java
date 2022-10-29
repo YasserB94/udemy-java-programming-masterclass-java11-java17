@@ -7,7 +7,36 @@ public class Main {
         //testBarkingDog();
         //testLeapYear();
         //testDecimalComparator();
-        testEqualSumChecker();
+        //testEqualSumChecker();
+        testTeenNumberChecker();
+    }
+    private static void testTeenNumberChecker(){
+        class TestCase{
+            int valOne,valTwo,valThree;
+            boolean expectedReturn;
+        }
+        TestCase[] testCases = new TestCase[3];
+        testCases[0]= new TestCase();
+        testCases[1]= new TestCase();
+        testCases[2]= new TestCase();
+
+        testCases[0].valOne = 9;
+        testCases[0].valTwo = 99;
+        testCases[0].valThree = 19;
+        testCases[0].expectedReturn = true;
+        testCases[1].valOne = 23;
+        testCases[1].valTwo = 15;
+        testCases[1].valThree = 42;
+        testCases[1].expectedReturn = true;
+        testCases[2].valOne = 22;
+        testCases[2].valTwo = 23;
+        testCases[2].valThree = 34;
+        testCases[2].expectedReturn = false;
+
+        for (TestCase testCase:testCases
+        ) {
+            System.out.println("Expected: " + testCase.expectedReturn + " Received: " + TeenNumberChecker.hasTeen(testCase.valOne,testCase.valTwo,testCase.valThree));
+        }
     }
     private static void testEqualSumChecker(){
         class TestCase{
