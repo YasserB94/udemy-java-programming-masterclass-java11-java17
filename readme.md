@@ -1,3 +1,8 @@
+#Java Udemy course
+This Readme, is not actually ment to be read :D
+
+There are no fun stories here, just some notes to guide me trough my road to Java
+
 
 Installation of tools
 Amazon coretto 11 installed
