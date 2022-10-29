@@ -3,8 +3,16 @@ public class Main {
         String greeting = "Hello Java!";
         System.out.println(greeting);
 
-        int sumOfNumbers = (10*10)+(80-9);
-        System.out.println(sumOfNumbers);
+        int challengeMyFirstNumber = (10*10)+(80-9);
+        System.out.println(challengeMyFirstNumber);
+
+        int challengeMySecondNumber = 12;
+        int challengeMyThirdNumber = challengeMyFirstNumber*2;
+        int challengeTotal = challengeMyFirstNumber+ challengeMySecondNumber+ challengeMyThirdNumber;
+        System.out.println(challengeTotal);
+
+        int challengeMyLastOne = 1000-challengeTotal;
+        System.out.println(challengeMyLastOne);
     }
 }
 
