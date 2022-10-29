@@ -4,7 +4,16 @@ public class Main {
         System.out.println("Hello Excercises!");
         //testSpeedConverter();
         //testMegaBytesConverter();
-        testBarkingDog();
+        //testBarkingDog();
+        testLeapYear();
+    }
+    private static void testLeapYear(){
+        int[] testCases = {1700,1800,1855,1856,1900,1924,2000,2100,2200,2300,2500,2600};
+        for (int testCase:testCases
+             ) {
+            System.out.println("Year: " + testCase  + " Returned: " + LeapYear.isLeapYear(testCase));
+        }
+
     }
     private static void testBarkingDog(){
         class TestCase{
