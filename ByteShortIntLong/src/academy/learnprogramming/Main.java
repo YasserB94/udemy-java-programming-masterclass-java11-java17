@@ -37,7 +37,20 @@ public class Main {
         long myLongValue = 2_147_483_648L;
         System.out.println("Long Value consisting of the largest Integer value +1 :" + myLongValue);
 
-        
+        //------ARITHMETIC EXPRESSIONS WITH PRIMITIVE DATA TYPES------
+        int myResult = (myIntMinValue /2);
 
+        //Following expression doesn't work as the default return value from an arithmetic expression is an INT
+        //byte myNewValue = (myByteMinValue/2);
+        //This can be resolved by casting the result into a byte (if it fits ofcourse)
+        byte myByteCastedResult = (byte) (myByteMinValue/2);
+        //Same resolution is required by other data types
+        short myShortCastedResult = (short) (myShortMinValue/2);
+
+        //SUMMARY---
+        /*
+        * Java by default uses INTEGER values, therefor it's recommended to use them as well for whole numbers,
+        * Unless ofcourse as a programmer you have a good reason to use anothe rdata type
+        * */
     }
 }
