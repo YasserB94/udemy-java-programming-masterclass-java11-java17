@@ -45,5 +45,30 @@ public class Main {
         result /=2;//Divide by two EQUAL TO result = result/2
         System.out.println(result);
 
+        //IF/THEN
+        boolean canShowWorstPracticesInOneFile = true;
+        if(canShowWorstPracticesInOneFile){
+            System.out.println("Ugh, Get trough these basics quick. you may run out of tissues soon!");
+        }else{
+            System.out.println("Congratulations! you are ready for a painful java career!");
+        }
+        String thankyou = (canShowWorstPracticesInOneFile) ? "Thank you for implementing this Java!" : "Ugh, no!";
+        System.out.println(thankyou);
+
+        //MOAR OPERATORS
+        // == is equal to
+        // > is greater than
+        // >= is greater OR equal than
+        // <= is smaller or equal to
+        // && AND
+        // || OR
+        // ! NOT
+        // ? TERNARY OPERATOR
+        // & = Bitwise AND covered later in the course?
+        //Not adding boilerplate here since these are the same as in Swift and Php
+        //ALL OPERATORS INCLUDING RELATIONAL ONES
+        //https://www.javatpoint.com/operators-in-java
+        //PRESCEDENCE TABLE
+        //https://www.cs.bilkent.edu.tr/~guvenir/courses/CS101/op_precedence.html
     }
 }
