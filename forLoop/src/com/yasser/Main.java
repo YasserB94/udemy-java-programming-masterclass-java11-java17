@@ -25,10 +25,7 @@ public class Main {
         once you printed 3 prime numbers, exit the for loop!
          */
         int primeCount = 0;
-        for (int i = 987987; i < Integer.MAX_VALUE; i++) {
-            if(primeCount>=3){
-                break;
-            }
+        for (int i = 987987; (i < Integer.MAX_VALUE&&primeCount<3); i++) {
             if(isPrime(i)){
                 System.out.println(i + " is A Prime Number");
                 primeCount++;
