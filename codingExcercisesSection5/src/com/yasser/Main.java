@@ -1,10 +1,13 @@
 package com.yasser;
+
 public class Main {
     public static void main(String[] args) {
         System.out.println("Hello Section 5! \n");
-        System.out.println(GreatestCommonDivisor.getGreatestCommonDivisor(100,90));    }
-    private static void testSumOdd(){
-        class TestCase{
+        FactorPrinter.printFactors(32);
+    }
+
+    private static void testSumOdd() {
+        class TestCase {
             int valOne;
             int valTwo;
             int expectedResponse;
@@ -37,14 +40,14 @@ public class Main {
         testCases[5].expectedResponse = 247500;
 
 
-        for (TestCase testcase:testCases
-             ) {
+        for (TestCase testcase : testCases
+        ) {
             System.out.println("Testing numbers: " + testcase.valOne + " and " + testcase.valTwo);
-            int output = SumOdd.sumOdd(testcase.valOne,testcase.valTwo);
-            if(output==testcase.expectedResponse){
+            int output = SumOdd.sumOdd(testcase.valOne, testcase.valTwo);
+            if (output == testcase.expectedResponse) {
                 System.out.println("Test passed! - " + testcase.expectedResponse + " Expected || " + output + " Received");
             }
-            if(output!=testcase.expectedResponse){
+            if (output != testcase.expectedResponse) {
                 System.out.println("Test failed! - " + testcase.expectedResponse + " Expected || " + output + " Received");
 
             }
