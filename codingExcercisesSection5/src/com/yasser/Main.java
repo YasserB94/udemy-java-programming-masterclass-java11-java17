@@ -3,7 +3,7 @@ package com.yasser;
 public class Main {
     public static void main(String[] args) {
         System.out.println("Hello Section 5! \n");
-        System.out.println(PerfectNumber.isPerfectNumber(5));
+        NumberToWords.numberToWords(10230);
     }
 
     private static void testSumOdd() {
