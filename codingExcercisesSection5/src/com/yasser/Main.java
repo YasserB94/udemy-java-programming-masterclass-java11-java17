@@ -3,7 +3,7 @@ package com.yasser;
 public class Main {
     public static void main(String[] args) {
         System.out.println("Hello Section 5! \n");
-        NumberToWords.numberToWords(10230);
+        NumberToWords.numberToWords(1023005);
     }
 
     private static void testSumOdd() {
