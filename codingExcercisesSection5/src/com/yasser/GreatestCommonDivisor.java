@@ -42,11 +42,9 @@ public class GreatestCommonDivisor {
         if(valOne<10 || valTwo<10){
             return -1;
         }
-        int a,b;
-        a = valOne>valTwo? valOne:valTwo;
-        b = valOne<valTwo? valOne:valTwo;
+        int a = Math.max(valOne, valTwo);
+        int b = Math.min(valOne, valTwo);
         int remainder = a%b;
-        //While there is a remainder apply the Euclidean Algorithm
         while(remainder!=0){
             a=b;
             b = remainder;
