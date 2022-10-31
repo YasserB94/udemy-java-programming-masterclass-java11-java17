@@ -2,7 +2,7 @@ package com.yasser;
 public class Main {
     public static void main(String[] args) {
         System.out.println("Hello Section 5! \n");
-        System.out.println(EvenDigitSum.getEvenDigitSum(123456789));
+        System.out.println(SharedDigit.hasSharedDigit(71,18));
     }
     private static void testSumOdd(){
         class TestCase{
