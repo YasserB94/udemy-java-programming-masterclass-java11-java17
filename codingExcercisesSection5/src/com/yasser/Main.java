@@ -2,7 +2,7 @@ package com.yasser;
 public class Main {
     public static void main(String[] args) {
         System.out.println("Hello Section 5! \n");
-        testSumOdd();
+        System.out.println(NumberPalindrome.isPalindrome(110));
     }
     private static void testSumOdd(){
         class TestCase{
