@@ -1,0 +1,15 @@
+package com.yasser;
+
+public class Cylinder extends Circle{
+    private double height;
+    public Cylinder(double radius, double height) {
+        super(radius);
+        this.height = Math.max(height,0d);
+    }
+    public double getVolume(){
+        return getArea()*height;
+    }
+    public double getHeight() {
+        return height;
+    }
+}
