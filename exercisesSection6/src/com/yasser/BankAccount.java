@@ -31,7 +31,7 @@ public class BankAccount {
             balance.subtract(amount);
             return amount;
         }else{
-            new BigDecimal(0);
+            return new BigDecimal(0);
         }
     }
     public BigDecimal getBalance() {
