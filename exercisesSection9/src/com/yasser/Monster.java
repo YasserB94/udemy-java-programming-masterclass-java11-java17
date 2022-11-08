@@ -5,6 +5,11 @@ import java.util.List;
 
 public class Monster implements ISaveable{
     private String name;
+
+
+
+
+
     private int hitPoints,strength;
 
     public Monster(String name, int hitPoints, int strength) {
